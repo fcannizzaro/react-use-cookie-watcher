@@ -1,0 +1,8 @@
+{
+  "short_name": "@fcannizzaro/react-use-cookie-watcher",
+  "name": "@fcannizzaro/react-use-cookie-watcher",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
