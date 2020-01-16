@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save @fcannizzaro/react-use-cookie-watcher
+yarn add @fcannizzaro/react-use-cookie-watcher
 ```
 
 ## Usage
@@ -15,13 +15,17 @@ npm install --save @fcannizzaro/react-use-cookie-watcher
 ```jsx
 import React, { Component } from 'react'
 
-import { useCookieWatcher } from '@fcannizzaro/react-use-cookie-watcher'
+import { useCookieWatcher, useCookie } from '@fcannizzaro/react-use-cookie-watcher'
 
 const Example = () => {
 
-  const isCookieNotExpired = useCookieWatcher('react-cookie', 500);
+  // cookie existence
+  const isNotExpired = useCookieWatcher('react-cookie', 500);
 
-  return <div>cookie {isCookieNotExpired ? 'found' : 'not found'}</div>
+  // cookie value
+  const cookie = useCookie('react-cookie');
+
+  return <div>cookie {isNotExpired ? 'found' : 'not found'}</div>
 
 }
 ```

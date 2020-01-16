@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react'
 
-const cookieExist = (cookie) => document.cookie.includes(cookie)
+const cookies = () => Object.fromEntries(document.cookie.split(';').map(it => it.split('=')))
+
+const cookieExist = (cookie) => cookies().hasOwnProperty(cookie)
 
 export const useCookieWatcher = (cookie, pollingRate = 250) => {
 
@@ -15,4 +17,4 @@ export const useCookieWatcher = (cookie, pollingRate = 250) => {
   return exist
 }
 
-export const useCookie = (cookie) => cookieExist(cookie)
+export const useCookie = (cookie) => cookies()[cookie]
