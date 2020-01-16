@@ -1,6 +1,6 @@
 {
   "name": "@fcannizzaro/react-use-cookie-watcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react hook to watch browser cookies",
   "author": "fcannizzaro",
   "license": "MIT",
