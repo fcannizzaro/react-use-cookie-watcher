@@ -1,8 +1,11 @@
 import {useEffect, useState} from 'react'
 
-const cookies = () => Object.fromEntries(document.cookie.split(';').map(it => it.split('=')))
+const cookies = () => Object.fromEntries(document.cookie.split(';').map(it => {
+  const [key, value] = it.split('=')
+  return [key.trim(), value]
+}))
 
-const cookieExist = (cookie) => cookies().hasOwnProperty(cookie)
+const cookieExist = (cookie) => !!cookies()[cookie]
 
 export const useCookieWatcher = (cookie, pollingRate = 250) => {
 
