@@ -5,7 +5,7 @@
   "author": "fcannizzaro",
   "license": "MIT",
   "repository": "https://github.com/fcannizzaro/react-use-cookie-watcher",
-  "version": "2.0.3",
+  "version": "2.0.6",
   "main": "./dist/cookie-watcher.umd.js",
   "module": "./dist/cookie-watcher.es.js",
   "types": "./dist/index.d.ts",
@@ -18,20 +18,8 @@
   },
   "scripts": {
     "test": "vitest",
+    "prepublish": "npm run build",
     "build": "tsc && vite build"
-  },
-  "devDependencies": {
-    "@testing-library/react": "^13.4.0",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "jsdom": "^20.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0",
-    "vite-plugin-dts": "^1.4.1",
-    "vitest": "^0.23.2"
   },
   "files": [
     "dist"
