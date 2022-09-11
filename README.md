@@ -7,28 +7,47 @@
 ## Install
 
 ```bash
-yarn add @fcannizzaro/react-use-cookie-watcher
+npm i @fcannizzaro/react-use-cookie-watcher
+# yarn add @fcannizzaro/react-use-cookie-watcher
+# pnpm add @fcannizzaro/react-use-cookie-watcher
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
-import { useCookieWatcher, useCookie } from '@fcannizzaro/react-use-cookie-watcher'
+import {useCookieWatcher, useCookie} from '@fcannizzaro/react-use-cookie-watcher'
 
 const Example = () => {
 
-  // cookie existence
-  const isNotExpired = useCookieWatcher('react-cookie', 500);
+    // cookie existence
+    const isNotExpired = useCookieWatcher('react-cookie', {
+        // check for changes every 500ms
+        checkEvery: 500
+    });
 
-  // cookie value
-  const cookie = useCookie('react-cookie');
+    // cookie value (updated on change)
+    const value = useCookieWatcher('react-cookie', {
+        valueOnly: 500
+    });
 
-  return <div>cookie {isNotExpired ? 'found' : 'not found'}</div>
+    // cookie value (at call time)
+    const cookie = useCookie('react-cookie');
+
+    return <div>
+        <p>cookie {isNotExpired ? 'found' : 'not found'}</p>
+        <p>cookie value = {value}</p>
+    </div>
 
 }
 ```
+
+## 2.0.0 Breaking Changes
+
+- added typescript support
+- `useCookieWatcher` now can return a boolean value or a string value (if `valueOnly` is set to `true`)
+- `useCookieWatcher` now accepts an options object as second parameter
 
 ## License
 
