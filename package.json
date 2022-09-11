@@ -5,7 +5,7 @@
   "author": "fcannizzaro",
   "license": "MIT",
   "repository": "https://github.com/fcannizzaro/react-use-cookie-watcher",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "./dist/cookie-watcher.umd.js",
   "module": "./dist/cookie-watcher.es.js",
   "types": "./dist/index.d.ts",

@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 
 // Get the cookie value by name
 const getCookie = (name: string) => {
-    const match = document.cookie.match(`(?:^|;)${name}=(.+?)(?:$|;)`);
+    const match = document.cookie.match(`(?:^| )${name}=(.+?)(?:$|;)`);
     return match ? match[1] : undefined;
 }
 
