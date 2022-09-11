@@ -2,7 +2,7 @@
 
 > react hook to watch browser cookies
 
-[![NPM](https://img.shields.io/npm/v/@fcannizzaro/react-use-cookie-watcher.svg)](https://www.npmjs.com/package/@fcannizzaro/react-use-cookie-watcher) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@fcannizzaro/react-use-cookie-watcher.svg)](https://www.npmjs.com/package/@fcannizzaro/react-use-cookie-watcher) [![Test](https://github.com/fcannizzaro/react-use-cookie-watcher/actions/workflows/test.yml/badge.svg)](https://github.com/fcannizzaro/react-use-cookie-watcher/actions/workflows/test.yml)
 
 ## Install
 
