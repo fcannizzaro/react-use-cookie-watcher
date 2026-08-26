@@ -29,7 +29,7 @@ const Example = () => {
 
     // cookie value (updated on change)
     const value = useCookieWatcher('react-cookie', {
-        valueOnly: 500
+        valueOnly: true
     });
 
     // cookie value (at call time)
